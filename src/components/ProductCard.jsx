@@ -22,7 +22,7 @@ export default function ProductCard({ product, onAddToCart, onOpenDetail }) {
         {badge && <span className="pcard__badge">{badge}</span>}
 
         <img
-          src={`/public/images/${image}`}
+          src={`/images/${image}`}
           alt={`Mi Esencia Divina – ${cristal}`}
           className="pcard__photo"
           onError={(e) => {
