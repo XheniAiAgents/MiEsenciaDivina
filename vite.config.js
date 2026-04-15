@@ -6,6 +6,7 @@ export default defineConfig({
   preview: {
     port: 8088,
     host: true,
+    allowedHosts: ["miesenciadivina.com", "www.miesenciadivina.com"],
   },
   server: {
     port: 8088,
