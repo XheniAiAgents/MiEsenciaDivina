@@ -1,0 +1,130 @@
+/* PageComingSoon.css */
+
+.coming-page {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+}
+
+.coming-page__inner {
+  text-align: center;
+  position: relative;
+  max-width: 520px;
+  width: 100%;
+}
+
+/* Rings decoration */
+.coming-page__rings {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.coming-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid var(--gold);
+  transform: translate(-50%, -50%);
+}
+
+.coming-ring--1 { width: 300px; height: 300px; opacity: 0.08; }
+.coming-ring--2 { width: 450px; height: 450px; opacity: 0.05; }
+.coming-ring--3 { width: 600px; height: 600px; opacity: 0.03; }
+
+.coming-page__content {
+  position: relative;
+  z-index: 1;
+}
+
+.coming-page__content h1 {
+  font-size: 3.2rem;
+  line-height: 1.1;
+  color: var(--black);
+  margin: 0.8rem 0 1rem;
+}
+
+.coming-page__subtitle {
+  font-size: 13px;
+  color: var(--gray);
+  line-height: 1.9;
+  max-width: 400px;
+  margin: 0 auto 1.5rem;
+}
+
+.coming-page__divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  max-width: 160px;
+  margin: 0 auto 1.5rem;
+}
+
+.coming-page__divider::before,
+.coming-page__divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--gold);
+  opacity: 0.35;
+}
+
+.coming-page__divider span {
+  color: var(--gold);
+  font-size: 12px;
+}
+
+.coming-page__note {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 1rem;
+}
+
+.coming-page__form {
+  display: flex;
+  gap: 0.6rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.coming-page__form input {
+  padding: 0.75rem 1.2rem;
+  border: 1px solid #ddd;
+  font-family: var(--font-body);
+  font-size: 12px;
+  outline: none;
+  min-width: 220px;
+  transition: border-color var(--transition);
+}
+
+.coming-page__form input:focus {
+  border-color: var(--gold);
+}
+
+.coming-page__back {
+  background: none;
+  border: none;
+  font-size: 11px;
+  color: #aaa;
+  cursor: pointer;
+  font-family: var(--font-body);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: underline;
+  transition: color var(--transition);
+}
+
+.coming-page__back:hover {
+  color: var(--gold);
+}
+
+@media (max-width: 500px) {
+  .coming-page__content h1 { font-size: 2.2rem; }
+  .coming-ring--1 { width: 200px; height: 200px; }
+  .coming-ring--2 { width: 300px; height: 300px; }
+  .coming-ring--3 { display: none; }
+}

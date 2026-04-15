@@ -1,0 +1,133 @@
+/* ProductCard.css */
+
+.pcard {
+  cursor: pointer;
+  transition: transform var(--transition);
+}
+
+.pcard:hover {
+  transform: translateY(-5px);
+}
+
+/* Imagen */
+.pcard__img {
+  aspect-ratio: 3 / 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  transition: border-color var(--transition);
+}
+
+.pcard:hover .pcard__img {
+  border-color: var(--gold);
+}
+
+.pcard__photo {
+  width: 75%;
+  height: 75%;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.pcard:hover .pcard__photo {
+  transform: scale(1.04);
+}
+
+.pcard__badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: var(--black);
+  color: var(--gold);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  font-weight: 600;
+  font-family: var(--font-body);
+  z-index: 2;
+}
+
+.pcard__crystal-tag {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(201, 168, 76, 0.12);
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  font-family: var(--font-body);
+  z-index: 2;
+}
+
+/* Info */
+.pcard__chakra {
+  font-size: 10px;
+  color: var(--gray);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+
+.pcard__name {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 0.25rem;
+  color: var(--black);
+}
+
+.pcard__intent {
+  font-size: 11px;
+  color: var(--gray);
+  font-style: italic;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.pcard__price {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gold);
+  margin-bottom: 0.8rem;
+}
+
+.pcard__price s {
+  color: #bbb;
+  font-weight: 400;
+  font-size: 11px;
+  margin-left: 6px;
+  text-decoration: line-through;
+}
+
+.pcard__add-btn {
+  width: 100%;
+  background: var(--black);
+  color: var(--white);
+  border: none;
+  padding: 0.65rem;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: background var(--transition), color var(--transition);
+}
+
+.pcard__add-btn:hover {
+  background: var(--gold);
+  color: var(--black);
+}
+
+.pcard__add-btn.added {
+  background: var(--gold);
+  color: var(--black);
+}

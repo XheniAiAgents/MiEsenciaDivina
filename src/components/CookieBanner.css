@@ -1,0 +1,156 @@
+/* CookieBanner.css */
+
+.cookie-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--white);
+  border-top: 2px solid var(--gold);
+  padding: 1.2rem 2rem;
+  z-index: 800;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  box-shadow: 0 -4px 24px rgba(201, 168, 76, 0.12);
+  animation: slideUp 0.4s ease;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to   { transform: translateY(0); }
+}
+
+.cookie-bar__icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+
+.cookie-bar__text {
+  flex: 1;
+  min-width: 220px;
+}
+
+.cookie-bar__text h4 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--gold);
+  margin-bottom: 0.3rem;
+}
+
+.cookie-bar__text p {
+  font-size: 11px;
+  color: #555;
+  line-height: 1.7;
+}
+
+.cookie-bar__text p span {
+  color: var(--gold);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.cookie-bar__text p em {
+  color: #999;
+  font-style: normal;
+}
+
+/* Preferencias */
+.cookie-bar__prefs {
+  margin-top: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.cookie-bar__check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  color: #555;
+  cursor: pointer;
+}
+
+.cookie-bar__check input[type="checkbox"] {
+  accent-color: var(--gold);
+  width: 14px;
+  height: 14px;
+}
+
+.cookie-bar__check--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Acciones */
+.cookie-bar__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.cookie-bar__accept {
+  background: var(--black);
+  color: var(--white);
+  border: none;
+  padding: 0.65rem 1.5rem;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--font-body);
+  white-space: nowrap;
+  transition: background var(--transition);
+}
+
+.cookie-bar__accept:hover {
+  background: var(--gold);
+}
+
+.cookie-bar__reject {
+  background: transparent;
+  color: #666;
+  border: 1px solid #ddd;
+  padding: 0.6rem 1.3rem;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: var(--font-body);
+  white-space: nowrap;
+  transition: border-color var(--transition), color var(--transition);
+}
+
+.cookie-bar__reject:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.cookie-bar__custom {
+  background: transparent;
+  border: none;
+  color: #999;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: var(--font-body);
+  text-decoration: underline;
+  text-align: center;
+  transition: color var(--transition);
+}
+
+.cookie-bar__custom:hover {
+  color: var(--gold);
+}
+
+@media (max-width: 600px) {
+  .cookie-bar { padding: 1rem 1.2rem; gap: 1rem; }
+}

@@ -1,0 +1,140 @@
+/* Hero.css */
+
+.hero {
+  background: var(--white);
+  min-height: 520px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 2rem;
+  padding: 5rem 2rem 0;
+  position: relative;
+  overflow: hidden;
+  border-bottom: var(--border-gold);
+}
+
+.hero__content {
+  max-width: 500px;
+  z-index: 1;
+  flex: 1;
+  min-width: 280px;
+}
+
+.hero__content h1 {
+  font-size: 3.8rem;
+  line-height: 1.1;
+  margin: 1rem 0 1.2rem;
+  color: var(--black);
+}
+
+.hero__content h1 em {
+  color: var(--gold);
+  font-style: italic;
+}
+
+.hero__desc {
+  color: #666;
+  font-size: 13px;
+  line-height: 1.9;
+  margin-bottom: 2rem;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Visual / logo */
+.hero__visual {
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+}
+
+.hero__logo-big {
+  width: 240px;
+  height: 240px;
+  object-fit: contain;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 8px 32px rgba(201, 168, 76, 0.18));
+}
+
+.hero__rings {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid var(--gold);
+}
+
+.hero__ring--1 {
+  width: 280px;
+  height: 280px;
+  opacity: 0.15;
+  animation: spin 20s linear infinite;
+}
+
+.hero__ring--2 {
+  width: 320px;
+  height: 320px;
+  opacity: 0.08;
+  animation: spin 30s linear infinite reverse;
+}
+
+.hero__ring--3 {
+  width: 360px;
+  height: 360px;
+  opacity: 0.05;
+  animation: spin 40s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Strip */
+.hero__strip {
+  width: 100%;
+  background: var(--black);
+  padding: 0.65rem 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin-top: 4rem;
+}
+
+.hero__strip span {
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--gold);
+}
+
+@media (max-width: 680px) {
+  .hero { padding: 3rem 1.5rem 0; min-height: auto; }
+  .hero__content h1 { font-size: 2.4rem; }
+  .hero__visual { display: none; }
+  .hero__strip { gap: 1.5rem; }
+}

@@ -1,0 +1,156 @@
+/* PageCristales.css */
+
+.cristales-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 2rem 5rem;
+}
+
+/* Header */
+.cristales-page__header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.cristales-page__header h1 {
+  font-size: 3rem;
+  line-height: 1.15;
+  margin: 0.6rem 0 1rem;
+  color: var(--black);
+}
+
+.cristales-page__header h1 em {
+  color: var(--gold);
+  font-style: italic;
+}
+
+.cristales-page__subtitle {
+  font-size: 13px;
+  color: var(--gray);
+  line-height: 1.9;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+/* Grid */
+.cristales-page__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.cristal-detail {
+  border-top: 3px solid;
+  overflow: hidden;
+  transition: box-shadow var(--transition);
+}
+
+.cristal-detail:hover {
+  box-shadow: var(--shadow-gold);
+}
+
+.cristal-detail__top {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cristal-detail__emoji {
+  font-size: 2.8rem;
+}
+
+.cristal-detail__chakra-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  opacity: 0.7;
+}
+
+.cristal-detail__body {
+  padding: 1.5rem;
+  background: var(--white);
+  border: 1px solid rgba(201,168,76,0.15);
+  border-top: none;
+}
+
+.cristal-detail__chakra-label {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: var(--font-body);
+  margin-bottom: 0.3rem;
+}
+
+.cristal-detail h3 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--black);
+  margin-bottom: 0.4rem;
+}
+
+.cristal-detail__intent {
+  font-size: 11px;
+  color: var(--gray);
+  font-style: italic;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+}
+
+.cristal-detail__desc {
+  font-size: 12px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 1.2rem;
+}
+
+.cristal-detail__btn {
+  background: transparent;
+  border: 1px solid;
+  padding: 0.5rem 1.2rem;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-weight: 500;
+  transition: background var(--transition), color var(--transition);
+}
+
+.cristal-detail__btn:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--black);
+}
+
+/* CTA */
+.cristales-page__cta {
+  text-align: center;
+  background: var(--bg-soft);
+  border: var(--border-gold);
+  padding: 3.5rem 2rem;
+}
+
+.cristales-page__cta h2 {
+  font-size: 2.2rem;
+  color: var(--black);
+  margin: 0.6rem 0 0.8rem;
+}
+
+.cristales-page__cta p {
+  font-size: 13px;
+  color: var(--gray);
+  margin-bottom: 1.8rem;
+}
+
+@media (max-width: 900px) {
+  .cristales-page__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 560px) {
+  .cristales-page__grid { grid-template-columns: 1fr; }
+  .cristales-page__header h1 { font-size: 2.2rem; }
+}

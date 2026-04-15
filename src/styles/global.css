@@ -1,0 +1,131 @@
+/* ============================================================
+   global.css  —  Mi Esencia Divina
+   Variables globales y reset base
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
+
+:root {
+  --gold: #C9A84C;
+  --gold-light: #E8CC7A;
+  --gold-pale: #F9F1DC;
+  --black: #0D0D0D;
+  --white: #FAFAFA;
+  --gray: #777;
+  --bg-soft: #F7F4EE;
+  --border-gold: 1px solid rgba(201, 168, 76, 0.25);
+
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body: 'Montserrat', sans-serif;
+
+  --transition: 0.25s ease;
+  --shadow-gold: 0 4px 24px rgba(201, 168, 76, 0.12);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--white);
+  color: var(--black);
+  font-size: 14px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Tipografía base ── */
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 300;
+}
+
+/* ── Botones base ── */
+.btn-primary {
+  background: var(--black);
+  color: var(--white);
+  border: none;
+  padding: 0.85rem 2rem;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: background var(--transition), transform var(--transition);
+}
+.btn-primary:hover {
+  background: var(--gold);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--black);
+  border: 1px solid var(--gold);
+  padding: 0.8rem 1.8rem;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: background var(--transition), color var(--transition);
+}
+.btn-outline:hover {
+  background: var(--gold);
+  color: var(--black);
+}
+
+/* ── Eyebrow ── */
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 500;
+  font-family: var(--font-body);
+}
+
+/* ── Divisor dorado ── */
+.gold-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  max-width: 180px;
+  margin: 0.8rem auto 0;
+}
+.gold-divider::before,
+.gold-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--gold);
+  opacity: 0.4;
+}
+.gold-divider span {
+  color: var(--gold);
+  font-size: 11px;
+}
+
+/* ── Section header ── */
+.section-header {
+  text-align: center;
+  padding: 3.5rem 2rem 2rem;
+}
+.section-header h2 {
+  font-size: 2.6rem;
+  color: var(--black);
+  margin-top: 0.6rem;
+}
+
+@media (max-width: 680px) {
+  .section-header h2 { font-size: 2rem; }
+}
