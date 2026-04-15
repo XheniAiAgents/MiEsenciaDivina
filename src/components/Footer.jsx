@@ -4,7 +4,7 @@
 import React from "react";
 import "./Footer.css";
 
-const logo = "/public/images/logo.jpeg";
+const logo = "/images/logo.jpeg";
 
 export default function Footer({ onNavigate }) {
   return (

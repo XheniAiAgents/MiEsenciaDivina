@@ -5,7 +5,7 @@
 
 import React from "react";
 import "./Hero.css";
-const logo = "/public/images/logo.jpeg";
+const logo = "/images/logo.jpeg";
 
 
 export default function Hero({ onNavigate }) {

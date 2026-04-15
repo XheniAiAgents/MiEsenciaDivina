@@ -6,7 +6,7 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 
-const logo = "/public/images/logo.jpeg";
+const logo = "/images/logo.jpeg";
 
 export default function Navbar({ cartCount, onCartOpen, onNavigate }) {
   const [menuOpen, setMenuOpen] = useState(false);
