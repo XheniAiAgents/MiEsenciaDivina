@@ -8,7 +8,7 @@ import "./ProductCard.css";
 
 export default function ProductCard({ product, onAddToCart, onOpenDetail }) {
   const { image, color, cristal, cristalEmoji, chakra, intencion,
-          precio, precioAnterior, badge } = product;
+          precio, precioAnterior, badge, nombre } = product;
 
   function handleAdd(e) {
     e.stopPropagation();
@@ -26,10 +26,13 @@ export default function ProductCard({ product, onAddToCart, onOpenDetail }) {
           alt={`Mi Esencia Divina – ${cristal}`}
           className="pcard__photo"
           onError={(e) => {
-            // fallback si la foto no existe aún
             e.target.style.display = "none";
+            e.target.nextSibling.style.display = "flex";
           }}
         />
+        <div className="pcard__emoji-fallback" style={{ display: "none" }}>
+          {cristalEmoji}
+        </div>
 
         {/* Cristal tag */}
         <span className="pcard__crystal-tag">
@@ -40,10 +43,11 @@ export default function ProductCard({ product, onAddToCart, onOpenDetail }) {
       {/* Info */}
       <div className="pcard__info">
         <p className="pcard__chakra">Chakra {chakra}</p>
-        <h3 className="pcard__name">Mi Esencia Divina</h3>
+        <h3 className="pcard__name">{nombre}</h3>
+        <p className="pcard__subtitle">Mi Esencia Divina</p>
         <p className="pcard__intent">"{intencion}"</p>
         <p className="pcard__price">
-          {precio},00 €
+          {precio === 0 ? "Gratis" : `${precio},00 €`}
           {precioAnterior && (
             <s>{precioAnterior},00 €</s>
           )}

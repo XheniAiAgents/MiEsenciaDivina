@@ -53,7 +53,8 @@ export default function Cart({ isOpen, onClose, items, onUpdateQty, onRemove }) 
                   />
                 </div>
                 <div className="cart-item__info">
-                  <p className="cart-item__name">Mi Esencia Divina</p>
+                  <p className="cart-item__name">{item.nombre}</p>
+                  <p className="cart-item__brand">Mi Esencia Divina</p>
                   <p className="cart-item__crystal">{item.cristalEmoji} {item.cristal}</p>
                   <p className="cart-item__price">{fmt(item.precio * item.qty)}</p>
                   <div className="cart-item__qty">

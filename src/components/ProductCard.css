@@ -37,6 +37,14 @@
   transform: scale(1.04);
 }
 
+.pcard__emoji-fallback {
+  font-size: 4rem;
+  align-items: center;
+  justify-content: center;
+  width: 75%;
+  height: 75%;
+}
+
 .pcard__badge {
   position: absolute;
   top: 10px;
@@ -80,8 +88,16 @@
   font-family: var(--font-display);
   font-size: 1.2rem;
   font-weight: 400;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.1rem;
   color: var(--black);
+}
+
+.pcard__subtitle {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--gold);
+  margin-bottom: 0.25rem;
 }
 
 .pcard__intent {

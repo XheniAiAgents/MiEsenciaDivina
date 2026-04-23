@@ -12,7 +12,7 @@ export default function ProductModal({ product, onClose, onAddToCart }) {
   const {
     image, color, cristal, cristalEmoji, chakra, chakraColor,
     intencion, descripcion, notasCabeza, notasCorazon, notasFondo,
-    precio, precioAnterior, badge,
+    precio, precioAnterior, badge, nombre,
   } = product;
 
   function handleAdd() {
@@ -41,11 +41,12 @@ export default function ProductModal({ product, onClose, onAddToCart }) {
         {/* Cuerpo */}
         <div className="modal__body">
           <p className="eyebrow">Chakra {chakra}</p>
-          <h2 className="modal__name">Mi Esencia Divina</h2>
+          <h2 className="modal__name">{nombre}</h2>
+          <p className="modal__brand">Mi Esencia Divina · Parfum</p>
           <p className="modal__intent">"{intencion}"</p>
 
           <p className="modal__price">
-            {precio},00 €
+            {precio === 0 ? "Gratis" : `${precio},00 €`}
             {precioAnterior && <s>{precioAnterior},00 €</s>}
           </p>
 

@@ -74,8 +74,16 @@
 
 .modal__name {
   font-size: 1.9rem;
-  margin: 0.4rem 0 0.25rem;
+  margin: 0.4rem 0 0.1rem;
   color: var(--black);
+}
+
+.modal__brand {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
 }
 
 .modal__intent {

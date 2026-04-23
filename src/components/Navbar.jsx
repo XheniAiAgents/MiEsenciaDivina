@@ -2,20 +2,15 @@
 //  Navbar.jsx  —  Mi Esencia Divina
 //  Navegación con hamburger menu para móvil
 // ============================================================
-
 import React, { useState } from "react";
 import "./Navbar.css";
-
 const logo = "/images/logo.jpeg";
-
 export default function Navbar({ cartCount, onCartOpen, onNavigate }) {
   const [menuOpen, setMenuOpen] = useState(false);
-
   function handleNav(page) {
     onNavigate(page);
     setMenuOpen(false);
   }
-
   return (
     <>
       <nav className="navbar">
@@ -27,7 +22,6 @@ export default function Navbar({ cartCount, onCartOpen, onNavigate }) {
             <span>Parfum</span>
           </div>
         </div>
-
         {/* Links desktop */}
         <ul className="navbar__links">
           <li><a onClick={() => handleNav("home")}>Inicio</a></li>
@@ -37,13 +31,14 @@ export default function Navbar({ cartCount, onCartOpen, onNavigate }) {
           <li><a onClick={() => handleNav("videos")}>Videos Subliminales</a></li>
           <li><a onClick={() => handleNav("nosotros")}>Nosotros</a></li>
         </ul>
-
         {/* Iconos */}
         <div className="navbar__icons">
-          <span className="navbar__icon" title="Buscar">🔍</span>
-          <span className="navbar__icon" title="Favoritos">♡</span>
           <button className="navbar__cart" onClick={onCartOpen} aria-label="Carrito">
-            🛍
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="9" cy="21" r="1"/>
+              <circle cx="20" cy="21" r="1"/>
+              <path d="M1 1h4l2.68 13.39a2 2 0 001.99 1.61h9.72a2 2 0 001.99-1.61L23 6H6"/>
+            </svg>
             {cartCount > 0 && (
               <span className="navbar__cart-count">{cartCount}</span>
             )}
@@ -60,7 +55,6 @@ export default function Navbar({ cartCount, onCartOpen, onNavigate }) {
           </button>
         </div>
       </nav>
-
       {/* Mobile menu */}
       {menuOpen && (
         <div className="navbar__mobile-overlay" onClick={() => setMenuOpen(false)}>

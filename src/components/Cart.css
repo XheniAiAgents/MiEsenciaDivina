@@ -119,6 +119,14 @@
   font-family: var(--font-display);
   font-size: 0.95rem;
   color: var(--black);
+  margin-bottom: 0.05rem;
+}
+
+.cart-item__brand {
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--gold);
   margin-bottom: 0.15rem;
 }
 
