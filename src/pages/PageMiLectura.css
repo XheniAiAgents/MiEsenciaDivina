@@ -1,0 +1,709 @@
+/* PageMiLectura.css */
+
+.lectura-page {
+  min-height: 80vh;
+}
+
+/* Hero */
+.lectura-hero {
+  text-align: center;
+  padding: 5rem 2rem 3.5rem;
+  background: linear-gradient(180deg, #faf7f0 0%, var(--white) 100%);
+  border-bottom: var(--border-gold);
+}
+
+.lectura-hero__ornament {
+  font-size: 0.75rem;
+  color: var(--gold);
+  letter-spacing: 0.5em;
+  margin-bottom: 1.2rem;
+}
+
+.lectura-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--black);
+  margin-bottom: 0.75rem;
+}
+
+.lectura-hero p {
+  font-size: 13px;
+  color: var(--gray);
+  letter-spacing: 0.06em;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Form section */
+.lectura-form-section {
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.lectura-form-wrap {
+  width: 100%;
+  max-width: 520px;
+}
+
+.lectura-form-intro {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.lectura-form-intro h2 {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  font-weight: 300;
+  font-style: italic;
+  margin-bottom: 0.6rem;
+}
+
+.lectura-form-intro p {
+  font-size: 13px;
+  color: var(--gray);
+  line-height: 1.7;
+}
+
+.lectura-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.lectura-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.lectura-field label {
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #888;
+  font-weight: 600;
+}
+
+.lectura-field input {
+  border: 1px solid #e0d8c8;
+  border-bottom: 1px solid var(--gold);
+  padding: 0.85rem 1rem;
+  font-size: 14px;
+  font-family: var(--font-body);
+  color: var(--black);
+  background: var(--white);
+  outline: none;
+  transition: border-color var(--transition);
+}
+
+.lectura-field input:focus {
+  border-color: var(--gold);
+  box-shadow: 0 2px 12px rgba(201,168,76,0.12);
+}
+
+.lectura-field__hint {
+  font-size: 10px;
+  color: #bbb;
+  letter-spacing: 0.05em;
+}
+
+.lectura-btn {
+  background: var(--black);
+  color: var(--white);
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: background var(--transition), transform var(--transition);
+  width: 100%;
+}
+
+.lectura-btn:hover:not(:disabled) {
+  background: var(--gold);
+  transform: translateY(-1px);
+}
+
+.lectura-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.lectura-btn--outline {
+  background: transparent;
+  color: var(--black);
+  border: 1px solid var(--gold);
+}
+
+.lectura-btn--outline:hover {
+  background: var(--gold-pale) !important;
+  transform: none !important;
+}
+
+.lectura-btn__loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.dot {
+  animation: spin 1.5s linear infinite;
+  display: inline-block;
+  color: var(--gold-light);
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.lectura-form__save-hint {
+  text-align: center;
+  font-size: 11px;
+  color: #aaa;
+  margin-top: -0.5rem;
+}
+
+.lectura-form__save-hint span {
+  color: var(--gold);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* Results */
+.lectura-results {
+  padding: 4rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.lectura-results__header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.lectura-results__name {
+  font-size: 14px;
+  color: var(--gray);
+  margin-bottom: 0.3rem;
+}
+
+.lectura-results__name strong {
+  color: var(--black);
+  font-style: italic;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.lectura-results__saved {
+  font-size: 11px;
+  color: var(--gold);
+  letter-spacing: 0.1em;
+}
+
+/* Number cards */
+.lectura-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.num-card {
+  border: var(--border-gold);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  background: var(--white);
+  transition: box-shadow var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.num-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(201,168,76,0.04) 0%, transparent 60%);
+}
+
+.num-card:hover {
+  box-shadow: var(--shadow-gold);
+}
+
+.num-card--accent {
+  background: var(--black);
+}
+
+.num-card--accent .num-card__icon,
+.num-card--accent .num-card__label,
+.num-card--accent .num-card__subtitle,
+.num-card--accent .num-card__title,
+.num-card--accent .num-card__desc {
+  color: var(--gold-pale) !important;
+}
+
+.num-card--accent .num-card__number {
+  color: var(--gold);
+}
+
+.num-card__icon {
+  font-size: 1.3rem;
+  color: var(--gold);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.num-card__number {
+  font-family: var(--font-display);
+  font-size: 4.5rem;
+  font-weight: 300;
+  color: var(--black);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.num-card__label {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.num-card__subtitle {
+  font-size: 11px;
+  color: var(--gray);
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.05em;
+}
+
+.num-card__meaning {
+  border-top: 1px solid rgba(201,168,76,0.2);
+  padding-top: 1.2rem;
+}
+
+.num-card__title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--black);
+  margin-bottom: 0.6rem;
+}
+
+.num-card__desc {
+  font-size: 12px;
+  color: var(--gray);
+  line-height: 1.7;
+}
+
+/* Crystal suggestion */
+.lectura-cristal {
+  margin-bottom: 2.5rem;
+  border: var(--border-gold);
+  background: var(--gold-pale);
+  padding: 1.5rem 2rem;
+}
+
+.lectura-cristal__inner {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.lectura-cristal__icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.lectura-cristal__label {
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #aaa;
+  margin-bottom: 0.2rem;
+}
+
+.lectura-cristal__name {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-style: italic;
+  color: var(--black);
+  margin-bottom: 0.1rem;
+}
+
+.lectura-cristal__chakra {
+  font-size: 11px;
+  color: var(--gold);
+  letter-spacing: 0.08em;
+}
+
+.lectura-results__actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.lectura-results__actions .lectura-btn {
+  flex: 1;
+  min-width: 180px;
+}
+
+/* Info section */
+.lectura-info {
+  background: #f9f7f2;
+  border-top: var(--border-gold);
+  padding: 4rem 2rem;
+}
+
+.lectura-info__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.lectura-info__card {
+  text-align: center;
+}
+
+.lectura-info__card span {
+  font-size: 1.5rem;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.lectura-info__card h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-style: italic;
+  font-weight: 400;
+  margin-bottom: 0.6rem;
+}
+
+.lectura-info__card p {
+  font-size: 12px;
+  color: var(--gray);
+  line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+  .lectura-hero { padding: 3rem 1.5rem 2.5rem; }
+  .lectura-form-section { padding: 2.5rem 1.5rem; }
+  .lectura-results { padding: 2.5rem 1.5rem; }
+  .lectura-cards { grid-template-columns: 1fr; }
+  .lectura-cristal__inner { flex-direction: column; text-align: center; }
+  .lectura-results__actions { flex-direction: column; }
+}
+
+/* ── Matrix of Destiny ────────────────────────────────────── */
+.matrix-section {
+  margin: 3.5rem 0 2rem;
+}
+
+.matrix-section__head {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.matrix-section__head h2 {
+  font-family: var(--font-display);
+  font-size: 1.9rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--black);
+  margin-bottom: 0.4rem;
+}
+
+.matrix-section__head p {
+  font-size: 12px;
+  color: var(--gray);
+  letter-spacing: 0.06em;
+}
+
+/* Star diagram */
+.matrix-wrap {
+  max-width: 380px;
+  margin: 0 auto 3rem;
+  border: var(--border-gold);
+  background: #faf7f0;
+  padding: 1.2rem;
+}
+
+.matrix-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 5 energy rows */
+.matrix-five {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: var(--border-gold);
+  margin-bottom: 0;
+}
+
+.matrix-row {
+  padding: 1.8rem 2rem;
+  border-bottom: var(--border-gold);
+  transition: background var(--transition);
+}
+
+.matrix-row:last-child { border-bottom: none; }
+.matrix-row:hover { background: #fdfaf4; }
+
+.matrix-row__header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.matrix-row__icon {
+  font-size: 1.4rem;
+  color: var(--gold);
+  flex-shrink: 0;
+  width: 2rem;
+  text-align: center;
+}
+
+.matrix-row__meta {
+  flex: 1;
+}
+
+.matrix-row__position {
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #bbb;
+  margin-bottom: 0.15rem;
+}
+
+.matrix-row__label {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--black);
+}
+
+.matrix-row__badge {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.1rem;
+  flex-shrink: 0;
+}
+
+.matrix-row__num {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 300;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.matrix-row__arcana-name {
+  font-size: 10px;
+  color: var(--gray);
+  letter-spacing: 0.06em;
+  text-align: right;
+  font-style: italic;
+}
+
+.matrix-row__body {
+  padding-left: 3rem;
+}
+
+.matrix-row__context {
+  font-size: 13px;
+  color: #444;
+  line-height: 1.8;
+  margin-bottom: 0.75rem;
+}
+
+.matrix-row__teaser {
+  font-size: 12px;
+  color: var(--gold);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1rem;
+}
+
+/* Read more CTA */
+.matrix-readmore {
+  border: var(--border-gold);
+  border-top: none;
+  padding: 2rem;
+  text-align: center;
+  background: #faf7f0;
+}
+
+.matrix-readmore__btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+  margin: 0 auto;
+  transition: opacity var(--transition);
+}
+
+.matrix-readmore__btn:hover { opacity: 0.7; }
+
+.matrix-readmore__btn-title {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--black);
+}
+
+.matrix-readmore__btn-sub {
+  font-size: 12px;
+  color: var(--gold);
+  letter-spacing: 0.06em;
+}
+
+.matrix-readmore__unlocked {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.matrix-readmore__unlocked span { color: var(--gold); font-size: 1rem; }
+.matrix-readmore__unlocked p { font-size: 12px; color: var(--gray); }
+
+@media (max-width: 600px) {
+  .matrix-row { padding: 1.4rem 1.2rem; }
+  .matrix-row__body { padding-left: 0; margin-top: 0.5rem; }
+  .matrix-row__header { flex-wrap: wrap; }
+  .matrix-wrap { padding: 0.6rem; }
+}
+
+/* ── Code modal ─────────────────────────────────────────────── */
+.code-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(13,13,13,0.6);
+  backdrop-filter: blur(4px);
+  z-index: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  animation: fadeIn 0.2s ease;
+}
+
+.code-modal {
+  background: var(--white);
+  width: 100%;
+  max-width: 400px;
+  padding: 2.5rem;
+  position: relative;
+  border: var(--border-gold);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+  animation: slideUp 0.25s ease;
+}
+
+.code-modal__close {
+  position: absolute;
+  top: 1rem; right: 1rem;
+  background: none; border: none;
+  font-size: 16px; color: #aaa; cursor: pointer;
+  transition: color var(--transition);
+}
+.code-modal__close:hover { color: var(--gold); }
+
+.code-modal__header {
+  text-align: center;
+  margin-bottom: 1.8rem;
+}
+.code-modal__header span { font-size: 2rem; display: block; margin-bottom: 0.75rem; }
+.code-modal__header h3 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 300;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+.code-modal__header p { font-size: 12px; color: var(--gray); line-height: 1.65; }
+
+.code-modal__form { display: flex; flex-direction: column; gap: 1rem; }
+
+.code-modal__input-wrap { display: flex; gap: 0.5rem; align-items: center; }
+
+.code-modal__input-wrap input {
+  flex: 1;
+  border: 1px solid #e0d8c8;
+  border-bottom: 1px solid var(--gold);
+  padding: 0.8rem 1rem;
+  font-size: 16px;
+  font-family: var(--font-body);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  outline: none;
+  text-align: center;
+  transition: border-color var(--transition);
+}
+.code-modal__input-wrap input:focus { border-color: var(--gold); }
+.code-modal__input-wrap input::placeholder { letter-spacing: 0.3em; color: #ccc; font-size: 13px; }
+
+.code-modal__hint-btn {
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  background: none;
+  border: 1px solid #e0d8c8;
+  font-size: 13px; color: #aaa; cursor: pointer;
+  flex-shrink: 0;
+  transition: all var(--transition);
+}
+.code-modal__hint-btn:hover { border-color: var(--gold); color: var(--gold); }
+
+.code-modal__hint {
+  background: var(--gold-pale);
+  border: var(--border-gold);
+  padding: 0.85rem 1rem;
+  font-size: 12px; color: #555; line-height: 1.6;
+}
+
+.code-modal__error {
+  font-size: 11px; color: #c0392b;
+  background: #fdf0ee; border: 1px solid #f5c6c0;
+  padding: 0.5rem 0.75rem; text-align: center;
+}
+
+.code-modal__success { text-align: center; padding: 1rem 0; }
+.code-modal__success span { font-size: 2.5rem; color: var(--gold); display: block; margin-bottom: 0.75rem; }
+.code-modal__success h3 { font-family: var(--font-display); font-size: 1.5rem; font-style: italic; margin-bottom: 0.5rem; }
+.code-modal__success p { font-size: 13px; color: var(--gray); }
+
+.lectura-results__lock-hint { font-size: 11px; color: #aaa; letter-spacing: 0.05em; margin-top: 0.3rem; }
+
+@keyframes fadeIn {
+  from { opacity: 0; } to { opacity: 1; }
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
