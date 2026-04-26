@@ -44,7 +44,7 @@ const FAQS = [
       },
       {
         q: "¿Cómo debo cuidar mi cristal?",
-        a: "Limpia tu cristal regularmente para renovar su energía. Puedes hacerlo dejándolo bajo la luz de la luna llena, enterrándolo brevemente en tierra, pasándolo por humo de salvia o simplemente lavándolo con agua fría con intención. Evita el sol directo prolongado con cristales de color como la amatista, que puede decolorarse."
+        a: "Limpia tu cristal regularmente para renovar su energía. Puedes hacerlo dejándolo bajo la luz de sol, enterrándolo brevemente en tierra, pasándolo por humo de salvia o simplemente lavándolo con agua fría con intención. Evita el sol directo prolongado con cristales de color como la amatista, que puede decolorarse."
       },
     ]
   },
