@@ -35,6 +35,7 @@ export default function Navbar({ cartCount, onCartOpen, onNavigate, user, onOpen
           <li><a onClick={() => handleNav("videos")}>Videos Subliminales</a></li>
           <li><a onClick={() => handleNav("lectura")} className="navbar__link--highlight">Mi Lectura</a></li>
           <li><a onClick={() => handleNav("nosotros")}>Nosotros</a></li>
+          <li><a onClick={() => handleNav("faq")}>FAQ</a></li>
         </ul>
 
         {/* Iconos */}
@@ -107,6 +108,8 @@ export default function Navbar({ cartCount, onCartOpen, onNavigate, user, onOpen
               <li><a onClick={() => handleNav("videos")}>Videos Subliminales</a></li>
               <li><a onClick={() => handleNav("lectura")} className="mobile-link--highlight">✦ Mi Lectura</a></li>
               <li><a onClick={() => handleNav("nosotros")}>Nosotros</a></li>
+              <li><a onClick={() => handleNav("faq")}>FAQ</a></li>
+          <li><a onClick={() => handleNav("faq")}>FAQ</a></li>
               {!user && (
                 <li><a onClick={() => { setMenuOpen(false); onOpenAuth(); }} className="mobile-link--auth">Iniciar sesión / Registrarse</a></li>
               )}

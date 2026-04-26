@@ -14,6 +14,7 @@ import Home            from "./pages/Home";
 import PageCristales   from "./pages/PageCristales";
 import PageNosotros    from "./pages/PageNosotros";
 import PageComingSoon  from "./pages/PageComingSoon";
+import PageFAQ from "./pages/PageFAQ";
 import PageMiLectura   from "./pages/PageMiLectura";
 import PageProfile     from "./pages/PageProfile";
 import {
@@ -99,6 +100,7 @@ export default function App() {
       case "privacidad": return <PagePrivacidad onNavigate={navigate} />;
       case "aviso":      return <PageAvisoLegal onNavigate={navigate} />;
       case "terminos":   return <PageTerminos onNavigate={navigate} />;
+      case "faq":        return <PageFAQ onNavigate={navigate} />;
       default:           return <Home onNavigate={navigate} onAddToCart={addToCart} />;
     }
   }
