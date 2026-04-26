@@ -18,7 +18,7 @@ import PageFAQ from "./pages/PageFAQ";
 import PageMiLectura   from "./pages/PageMiLectura";
 import PageProfile     from "./pages/PageProfile";
 import {
-  PageCookies, PagePrivacidad, PageAvisoLegal, PageTerminos,
+  PageCookies, PagePrivacidad, PageAvisoLegal, PageTerminos, PageDevoluciones,
 } from "./pages/LegalPages";
 
 import { useAuth, loadCart, persistCart } from "./hooks/useAuth";
@@ -100,6 +100,7 @@ export default function App() {
       case "privacidad": return <PagePrivacidad onNavigate={navigate} />;
       case "aviso":      return <PageAvisoLegal onNavigate={navigate} />;
       case "terminos":   return <PageTerminos onNavigate={navigate} />;
+      case "devoluciones": return <PageDevoluciones onNavigate={navigate} />;
       case "faq":        return <PageFAQ onNavigate={navigate} />;
       default:           return <Home onNavigate={navigate} onAddToCart={addToCart} />;
     }

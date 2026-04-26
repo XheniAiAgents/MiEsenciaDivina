@@ -146,3 +146,50 @@ export function PageTerminos({ onNavigate }) {
     </LegalLayout>
   );
 }
+
+// ── Política de Devoluciones ─────────────────────────────────
+export function PageDevoluciones({ onNavigate }) {
+  return (
+    <LegalLayout title="Política de Devoluciones" eyebrow="Legal" onNavigate={onNavigate}>
+      <h2>Tu derecho de desistimiento</h2>
+      <p>De acuerdo con el Real Decreto Legislativo 1/2007 (Texto Refundido de la Ley General para la Defensa de los Consumidores y Usuarios) y la Directiva Europea 2011/83/UE, tienes derecho a desistir de tu compra en un plazo de <strong>14 días naturales</strong> desde la recepción del pedido, sin necesidad de justificación alguna.</p>
+
+      <h2>¿Qué productos pueden devolverse?</h2>
+      <p>Podrás ejercer el derecho de desistimiento siempre que el producto se encuentre en las siguientes condiciones:</p>
+      <ul>
+        <li>El producto no ha sido abierto ni usado</li>
+        <li>Conserva su precinto original intacto</li>
+        <li>Se devuelve en su embalaje original, incluyendo todos los accesorios y la tarjeta de código incluida</li>
+        <li>No han transcurrido más de 14 días naturales desde la recepción</li>
+      </ul>
+
+      <h2>Productos excluidos de devolución</h2>
+      <p>Por razones de higiene y protección de la salud, quedan excluidos del derecho de desistimiento los productos de perfumería y cosmética que hayan sido <strong>abiertos o cuyo precinto haya sido retirado</strong>, conforme al Art. 103.e) del Real Decreto Legislativo 1/2007.</p>
+      <p>Asimismo, los códigos de desbloqueo de lectura espiritual que hayan sido canjeados no son reembolsables, al tratarse de contenido digital de uso inmediato.</p>
+
+      <h2>¿Cómo iniciar una devolución?</h2>
+      <p>Para solicitar una devolución, sigue estos pasos:</p>
+      <ul>
+        <li>Escríbenos a <strong>hola@miesenciadivina.com</strong> dentro del plazo de 14 días indicando tu nombre, número de pedido y motivo de la devolución</li>
+        <li>Te confirmaremos la recepción de tu solicitud y te indicaremos la dirección de envío</li>
+        <li>Envía el producto en su embalaje original. Los gastos de devolución corren a cargo del cliente, salvo que el producto esté defectuoso o hayamos cometido un error en el pedido</li>
+        <li>Una vez recibido e inspeccionado el producto, procesaremos el reembolso en un plazo máximo de <strong>14 días naturales</strong></li>
+      </ul>
+
+      <h2>Reembolsos</h2>
+      <p>El reembolso se realizará mediante el mismo método de pago utilizado en la compra original. No se aplicarán comisiones por el reembolso. En caso de que el envío original hubiera sido gratuito por superar el mínimo de 60€ y la devolución parcial dejara el pedido por debajo de dicho importe, podremos descontar los gastos de envío originales del reembolso.</p>
+
+      <h2>Productos defectuosos o incorrectos</h2>
+      <p>Si recibes un producto defectuoso, dañado durante el transporte o diferente al pedido, contáctanos en un plazo de <strong>48 horas</strong> desde la recepción en <strong>hola@miesenciadivina.com</strong> adjuntando fotografías del producto y del embalaje. En estos casos, los gastos de devolución y reenvío corren íntegramente a nuestro cargo.</p>
+
+      <h2>Garantía legal</h2>
+      <p>Todos nuestros productos cuentan con la garantía legal de <strong>2 años</strong> establecida por la legislación española y europea de protección al consumidor. En caso de producto defectuoso dentro del periodo de garantía, procederemos a su reparación, sustitución o reembolso según corresponda.</p>
+
+      <h2>Resolución de disputas</h2>
+      <p>En caso de controversia no resuelta, puedes acudir a la plataforma europea de resolución de litigios en línea disponible en: <strong>ec.europa.eu/consumers/odr</strong></p>
+
+      <h2>Contacto</h2>
+      <p>Para cualquier consulta relacionada con devoluciones: <strong>hola@miesenciadivina.com</strong></p>
+    </LegalLayout>
+  );
+}

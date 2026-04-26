@@ -66,6 +66,7 @@ export default function Footer({ onNavigate }) {
             <li><a onClick={() => onNavigate("privacidad")}>Política de privacidad</a></li>
             <li><a onClick={() => onNavigate("aviso")}>Aviso legal</a></li>
             <li><a onClick={() => onNavigate("terminos")}>Términos y condiciones</a></li>
+            <li><a onClick={() => onNavigate("devoluciones")}>Política de devoluciones</a></li>
           </ul>
         </div>
       </div>
